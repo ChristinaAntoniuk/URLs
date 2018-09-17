@@ -1,0 +1,34 @@
+﻿@model TestApp.Models.URL
+
+@{
+    ViewBag.Title = "UrlDetails";
+}
+<h2>UrlDetails</h2>
+<style>
+    table {
+        width: 100%;
+    }
+    table, tr, th {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>URL</th>
+        <th>Title</th>
+        <th>Response Status Code</th>
+    </tr>
+    @{
+        for (int i = 0; i < Model.URLs.Length; i++)
+        {
+            <tr>
+                <th>@Model.URLs[i]</th>
+                <th>@Model.Titles[i]</th>
+                <th>@Model.ResStatusCodes[i]</th>
+            </tr>
+        }
+    }
+</table>
+
+
+

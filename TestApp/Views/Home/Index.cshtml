@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model TestApp.Models.URL
+
+<style>
+    textarea {
+        height: 50%;
+    }
+</style>
+
+@using (Html.BeginForm("UrlDetails", "Home"))
+{
+ <div style="margin: 20px">
+     @Html.TextAreaFor(model => model.URLsSet, new { @class = "form-control" })
+     <input type="submit" value="Get Information" class="elements" />
+ </div>
+}
